@@ -1,0 +1,134 @@
+.app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  text-align: left;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-family: var(--mono);
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #9ca3af;
+}
+
+.status.online .status-dot {
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.status.offline .status-dot {
+  background: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  color: var(--text-h);
+  font: 15px/145% var(--sans);
+  resize: vertical;
+  box-sizing: border-box;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+}
+
+textarea::placeholder {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.submit-btn {
+  align-self: flex-start;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.summary {
+  margin-top: 28px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--accent-border);
+  background: var(--accent-bg);
+  color: var(--text-h);
+  white-space: pre-wrap;
+  line-height: 155%;
+}
